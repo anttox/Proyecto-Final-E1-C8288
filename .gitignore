@@ -6,16 +6,13 @@
 # Testing
 **/coverage
 
-# Production builds
-**/build/
-**/dist/
+# Production builds (Ignorar solo el directorio "build" final, pero no el resto del frontend)
+sistema-autorizacion/frontend/build/
+sistema-autorizacion/backend/dist/
 
-# Environment variables
-**/.env
-**/.env.local
-**/.env.development.local
-**/.env.test.local
-**/.env.production.local
+# Environment variables (Ignorar solo los archivos sensibles relacionados con variables de entorno)
+sistema-autorizacion/frontend/.env*
+sistema-autorizacion/backend/.env*
 
 # Docker files
 postgres_data/
