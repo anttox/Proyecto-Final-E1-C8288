@@ -19,3 +19,99 @@ Antes de iniciar el proyecto, asegúrate de cumplir con los siguientes requisito
       docker --version
       docker-compose --version
 ```
+
+# Estructura del proyecto completo
+```bash
+Proyecto-Final/
+├── sistema-autorizacion/
+│   ├── backend/
+│   │   ├── dist/                   # Archivos compilados de TypeScript
+│   │   ├── node_modules/           # Dependencias instaladas
+│   │   ├── logs/                   # Archivos de log generados
+│   │   ├── src/                    # Código fuente del backend
+│   │   │   ├── __test__/           # Pruebas unitarias
+│   │   │   │   └── sample.test.ts  # Ejemplo de prueba
+│   │   │   ├── controllers/        # Lógica de controladores
+│   │   │   │   ├── authController.ts
+│   │   │   │   ├── resourceController.ts
+│   │   │   │   └── userController.ts
+│   │   │   ├── middlewares/        # Middleware para autenticación y validaciones
+│   │   │   │   ├── authMiddleware.ts
+│   │   │   │   ├── errorHandler.ts
+│   │   │   │   ├── logMiddleware.ts
+│   │   │   │   └── validationMiddleware.ts
+│   │   │   ├── models/             # Lógica de interacción con la base de datos
+│   │   │   │   ├── logModel.ts
+│   │   │   │   ├── resourceModel.ts
+│   │   │   │   ├── testLog.ts
+│   │   │   │   └── userModel.ts
+│   │   │   ├── routes/             # Configuración de rutas
+│   │   │   │   ├── authRoutes.ts
+│   │   │   │   ├── logRoutes.ts
+│   │   │   │   ├── resourceRoutes.ts
+│   │   │   │   └── userRoutes.ts
+│   │   │   ├── tests/              # Archivo para probar la conexión
+│   │   │   │   └── testConnection.ts
+│   │   │   ├── types/              # Tipos personalizados
+│   │   │   │   └── express/index.d.ts
+│   │   │   ├── utils/              # Utilidades
+│   │   │   │   ├── hashUtil.ts
+│   │   │   │   ├── jwtUtil.ts
+│   │   │   │   └── logger.ts
+│   │   │   ├── config.ts           # Configuración de conexión con la base de datos
+│   │   │   ├── init-db.ts          # Inicialización de la base de datos
+│   │   │   └── server.ts           # Punto de entrada del backend
+│   │   ├── .env.docker             # Variables de entorno para Docker
+│   │   ├── .env.local              # Variables de entorno para desarrollo local
+│   │   ├── Dockerfile              # Dockerfile para el backend
+│   │   ├── package-lock.json       # Archivo de dependencias bloqueadas
+│   │   ├── package.json            # Definición de dependencias del proyecto
+│   │   ├── test-db.js              # Script de prueba para conexión con PostgreSQL
+│   │   └── tsconfig.json           # Configuración de TypeScript
+│   │
+│   ├── frontend/
+│   │   ├── build/                  # Archivos compilados del frontend
+│   │   ├── node_modules/           # Dependencias instaladas
+│   │   ├── public/                 # Archivos estáticos públicos
+│   │   ├── src/                    # Código fuente del frontend
+│   │   │   ├── components/         # Componentes reutilizables
+│   │   │   │   ├── Auth/           # Componentes de autenticación
+│   │   │   │   │   ├── Login.tsx
+│   │   │   │   │   └── Register.tsx
+│   │   │   │   ├── Layout/         # Componentes de diseño
+│   │   │   │   │   ├── Footer.tsx
+│   │   │   │   │   └── Navbar.tsx
+│   │   │   │   ├── Resources/      # Gestión de recursos
+│   │   │   │   │   ├── EditResourceForm.tsx
+│   │   │   │   │   ├── ResourceForm.tsx
+│   │   │   │   │   └── ResourceList.tsx
+│   │   │   ├── pages/              # Páginas principales
+│   │   │   │   ├── AdminUser.tsx
+│   │   │   │   ├── Dashboard.tsx
+│   │   │   │   ├── Home.tsx
+│   │   │   │   └── Profile.tsx
+│   │   │   ├── services/           # Servicios para interacción con la API
+│   │   │   │   └── apiService.ts
+│   │   │   ├── App.css             # Estilos generales
+│   │   │   ├── App.test.tsx        # Pruebas de React
+│   │   │   ├── App.tsx             # Punto de entrada de la aplicación React
+│   │   │   ├── index.css           # Estilos base
+│   │   │   ├── index.tsx           # Punto de entrada principal
+│   │   │   ├── react-app-env.d.ts  # Definiciones de React
+│   │   │   ├── reportWebVitals.ts  # Reporte de métricas de rendimiento
+│   │   │   └── setupTests.ts       # Configuración para pruebas
+│   │   ├── .env.docker             # Variables de entorno para Docker
+│   │   ├── .env.local              # Variables de entorno para desarrollo local
+│   │   ├── Dockerfile              # Dockerfile para el frontend
+│   │   ├── jest.config.ts          # Configuración de Jest
+│   │   ├── package-lock.json       # Archivo de dependencias bloqueadas
+│   │   ├── package.json            # Definición de dependencias del proyecto
+│   │   └── tsconfig.json           # Configuración de TypeScript
+│   │
+│   ├── database/
+│   │   └── init.sql                # Script de inicialización de la base de datos
+│   │
+│   ├── docker-compose.yml          # Configuración de servicios con Docker Compose
+│
+├── .gitignore                      # Archivos y carpetas ignoradas por Git
+```
