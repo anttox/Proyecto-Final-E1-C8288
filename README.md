@@ -25,93 +25,140 @@ Antes de iniciar el proyecto, asegúrate de cumplir con los siguientes requisito
 Proyecto-Final/
 ├── sistema-autorizacion/
 │   ├── backend/
-│   │   ├── dist/                   # Archivos compilados de TypeScript
-│   │   ├── node_modules/           # Dependencias instaladas
-│   │   ├── logs/                   # Archivos de log generados
-│   │   ├── src/                    # Código fuente del backend
-│   │   │   ├── __test__/           # Pruebas unitarias
-│   │   │   │   └── sample.test.ts  # Ejemplo de prueba
-│   │   │   ├── controllers/        # Lógica de controladores
+│   │   ├── dist/                  
+│   │   ├── node_modules/           
+│   │   ├── logs/                   
+│   │   ├── src/                    
+│   │   │   ├── __test__/           
+│   │   │   │   └── sample.test.ts  
+│   │   │   ├── controllers/        
 │   │   │   │   ├── authController.ts
 │   │   │   │   ├── resourceController.ts
 │   │   │   │   └── userController.ts
-│   │   │   ├── middlewares/        # Middleware para autenticación y validaciones
+│   │   │   ├── middlewares/        
 │   │   │   │   ├── authMiddleware.ts
 │   │   │   │   ├── errorHandler.ts
 │   │   │   │   ├── logMiddleware.ts
 │   │   │   │   └── validationMiddleware.ts
-│   │   │   ├── models/             # Lógica de interacción con la base de datos
+│   │   │   ├── models/             
 │   │   │   │   ├── logModel.ts
 │   │   │   │   ├── resourceModel.ts
 │   │   │   │   ├── testLog.ts
 │   │   │   │   └── userModel.ts
-│   │   │   ├── routes/             # Configuración de rutas
+│   │   │   ├── routes/             
 │   │   │   │   ├── authRoutes.ts
 │   │   │   │   ├── logRoutes.ts
 │   │   │   │   ├── resourceRoutes.ts
 │   │   │   │   └── userRoutes.ts
-│   │   │   ├── tests/              # Archivo para probar la conexión
+│   │   │   ├── tests/             
 │   │   │   │   └── testConnection.ts
-│   │   │   ├── types/              # Tipos personalizados
+│   │   │   ├── types/              
 │   │   │   │   └── express/index.d.ts
-│   │   │   ├── utils/              # Utilidades
+│   │   │   ├── utils/              
 │   │   │   │   ├── hashUtil.ts
 │   │   │   │   ├── jwtUtil.ts
 │   │   │   │   └── logger.ts
-│   │   │   ├── config.ts           # Configuración de conexión con la base de datos
-│   │   │   ├── init-db.ts          # Inicialización de la base de datos
-│   │   │   └── server.ts           # Punto de entrada del backend
-│   │   ├── .env.docker             # Variables de entorno para Docker
-│   │   ├── .env.local              # Variables de entorno para desarrollo local
-│   │   ├── Dockerfile              # Dockerfile para el backend
-│   │   ├── package-lock.json       # Archivo de dependencias bloqueadas
-│   │   ├── package.json            # Definición de dependencias del proyecto
-│   │   ├── test-db.js              # Script de prueba para conexión con PostgreSQL
-│   │   └── tsconfig.json           # Configuración de TypeScript
+│   │   │   ├── config.ts           
+│   │   │   ├── init-db.ts          
+│   │   │   └── server.ts         
+│   │   ├── .env.docker             
+│   │   ├── .env.local              
+│   │   ├── Dockerfile              
+│   │   ├── package-lock.json       
+│   │   ├── package.json            
+│   │   ├── test-db.js              
+│   │   └── tsconfig.json           
 │   │
 │   ├── frontend/
-│   │   ├── build/                  # Archivos compilados del frontend
-│   │   ├── node_modules/           # Dependencias instaladas
-│   │   ├── public/                 # Archivos estáticos públicos
-│   │   ├── src/                    # Código fuente del frontend
-│   │   │   ├── components/         # Componentes reutilizables
-│   │   │   │   ├── Auth/           # Componentes de autenticación
+│   │   ├── build/                  
+│   │   ├── node_modules/           
+│   │   ├── public/                 
+│   │   ├── src/                    
+│   │   │   ├── components/         
+│   │   │   │   ├── Auth/           
 │   │   │   │   │   ├── Login.tsx
 │   │   │   │   │   └── Register.tsx
-│   │   │   │   ├── Layout/         # Componentes de diseño
+│   │   │   │   ├── Layout/         
 │   │   │   │   │   ├── Footer.tsx
 │   │   │   │   │   └── Navbar.tsx
-│   │   │   │   ├── Resources/      # Gestión de recursos
+│   │   │   │   ├── Resources/      
 │   │   │   │   │   ├── EditResourceForm.tsx
 │   │   │   │   │   ├── ResourceForm.tsx
 │   │   │   │   │   └── ResourceList.tsx
-│   │   │   ├── pages/              # Páginas principales
+│   │   │   ├── pages/              
 │   │   │   │   ├── AdminUser.tsx
 │   │   │   │   ├── Dashboard.tsx
 │   │   │   │   ├── Home.tsx
 │   │   │   │   └── Profile.tsx
-│   │   │   ├── services/           # Servicios para interacción con la API
+│   │   │   ├── services/           
 │   │   │   │   └── apiService.ts
-│   │   │   ├── App.css             # Estilos generales
-│   │   │   ├── App.test.tsx        # Pruebas de React
-│   │   │   ├── App.tsx             # Punto de entrada de la aplicación React
-│   │   │   ├── index.css           # Estilos base
-│   │   │   ├── index.tsx           # Punto de entrada principal
-│   │   │   ├── react-app-env.d.ts  # Definiciones de React
-│   │   │   ├── reportWebVitals.ts  # Reporte de métricas de rendimiento
-│   │   │   └── setupTests.ts       # Configuración para pruebas
-│   │   ├── .env.docker             # Variables de entorno para Docker
-│   │   ├── .env.local              # Variables de entorno para desarrollo local
-│   │   ├── Dockerfile              # Dockerfile para el frontend
-│   │   ├── jest.config.ts          # Configuración de Jest
-│   │   ├── package-lock.json       # Archivo de dependencias bloqueadas
-│   │   ├── package.json            # Definición de dependencias del proyecto
-│   │   └── tsconfig.json           # Configuración de TypeScript
+│   │   │   ├── App.css             
+│   │   │   ├── App.test.tsx        
+│   │   │   ├── App.tsx             
+│   │   │   ├── index.css           
+│   │   │   ├── index.tsx           
+│   │   │   ├── react-app-env.d.ts  
+│   │   │   ├── reportWebVitals.ts 
+│   │   │   └── setupTests.ts      
+│   │   ├── .env.docker             
+│   │   ├── .env.local             
+│   │   ├── Dockerfile              
+│   │   ├── jest.config.ts         
+│   │   ├── package-lock.json       
+│   │   ├── package.json            
+│   │   └── tsconfig.json           
 │   │
 │   ├── database/
-│   │   └── init.sql                # Script de inicialización de la base de datos
+│   │   └── init.sql                
 │   │
-│   ├── docker-compose.yml          # Configuración de servicios con Docker Compose
+│   ├── docker-compose.yml          
 │
-├── .gitignore                      # Archivos y carpetas ignoradas por Git
+├── .gitignore                      
 ```
+
+# Configuracion del proyecto
+- Clona este repositorio que contiene el proyecto usando: git clone
+- Una vez que hayas establecido tu archivo de clonacion usa docker compose up --build para crear en la carpeta sistema-autorizacion para construir las imagenes de Docker para cada servicio (backend, frontend y base de datos) y levantar los contenedores interconectados.
+- En este proyecto, Docker Compose se encarga de instalar las dependencias automaticamente. Aquí detallamos las dependencias especificas y sus propositos.
+
+## Backend:
+```bash
+Navega al directorio backend:
+cd backend
+```
+
+### Dependencias principales (definidas en package.json):
+- express: Framework web para manejar solicitudes HTTP.
+- pg: Cliente de PostgreSQL para interactuar con la base de datos.
+- jsonwebtoken: Manejo de tokens JWT para autenticación.
+- bcrypt: Cifrado de contraseñas.
+- dotenv: Manejo de variables de entorno.
+- winston: Registro de logs.
+
+### Dependencias de desarrollo:
+- typescript: Tipado estático.
+- ts-node-dev: Ejecución en desarrollo.
+- jest: Pruebas unitarias.
+- Tipos (@types): Aseguran compatibilidad con TypeScript.
+
+Frontend:
+```bash
+    Navega al directorio frontend:
+
+    cd frontend
+```
+### Dependencias principales (definidas en package.json):
+- react y react-dom: Biblioteca principal de la interfaz.
+- axios: Cliente HTTP para consumir la API.
+- react-router-dom: Manejo de rutas en React.
+- Dependencias de desarrollo:
+- typescript: Tipado estático.
+- jest: Pruebas unitarias.
+- Tipos (@types): Compatibilidad con TypeScript.
+
+## Base de Datos:
+El script database/init.sql define la estructura inicial:
+- Tablas: usuarios, recursos, logs.
+- Índices: Optimización para consultas rápidas.
+- Datos iniciales: Usuario administrador y logs.
+
